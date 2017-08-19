@@ -26,6 +26,7 @@
 		48407B3A1F47F29B00BB1C1A /* UIImageView+async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48407B391F47F29B00BB1C1A /* UIImageView+async.swift */; };
 		48407B3C1F47F55600BB1C1A /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48407B3B1F47F55600BB1C1A /* APITests.swift */; };
 		48407B3E1F47F7EB00BB1C1A /* ImageDownloadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48407B3D1F47F7EB00BB1C1A /* ImageDownloadTests.swift */; };
+		48407B421F4808F700BB1C1A /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48407B411F4808F700BB1C1A /* Utils.swift */; };
 		5BF9417ABA490FE59B3771A5 /* Pods_ProficiencyTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39C3490168A99A578846E4EA /* Pods_ProficiencyTestTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		48407B391F47F29B00BB1C1A /* UIImageView+async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+async.swift"; sourceTree = "<group>"; };
 		48407B3B1F47F55600BB1C1A /* APITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
 		48407B3D1F47F7EB00BB1C1A /* ImageDownloadTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloadTests.swift; sourceTree = "<group>"; };
+		48407B411F4808F700BB1C1A /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		7941169A2C733DAAFB787333 /* Pods-ProficiencyTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProficiencyTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProficiencyTest/Pods-ProficiencyTest.debug.xcconfig"; sourceTree = "<group>"; };
 		7BE9924F659AAC08DB9A6E13 /* Pods-ProficiencyTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProficiencyTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProficiencyTest/Pods-ProficiencyTest.release.xcconfig"; sourceTree = "<group>"; };
 		8A0BC08CB9258BDB713A6F70 /* Pods_ProficiencyTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProficiencyTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,11 +95,11 @@
 		48407AED1F47CBF700BB1C1A = {
 			isa = PBXGroup;
 			children = (
+				F74E0AC3C77E7EB22079C514 /* Frameworks */,
+				903A12EB9027E2C17E9033EB /* Pods */,
+				48407AF71F47CBF800BB1C1A /* Products */,
 				48407AF81F47CBF800BB1C1A /* ProficiencyTest */,
 				48407B0D1F47CBF800BB1C1A /* ProficiencyTestTests */,
-				48407AF71F47CBF800BB1C1A /* Products */,
-				903A12EB9027E2C17E9033EB /* Pods */,
-				F74E0AC3C77E7EB22079C514 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,13 +115,13 @@
 		48407AF81F47CBF800BB1C1A /* ProficiencyTest */ = {
 			isa = PBXGroup;
 			children = (
-				48407B291F47DC2300BB1C1A /* config */,
-				48407B361F47E40900BB1C1A /* Helpers */,
-				48407B2F1F47DD9F00BB1C1A /* Networking */,
-				48407AF91F47CBF800BB1C1A /* AppDelegate.swift */,
 				48407B261F47DBE700BB1C1A /* DataProvider */,
+				48407B361F47E40900BB1C1A /* Helpers */,
 				48407B1A1F47CC5600BB1C1A /* HomeViewController */,
+				48407B2F1F47DD9F00BB1C1A /* Networking */,
 				48407B191F47CBFE00BB1C1A /* Supporting files */,
+				48407B291F47DC2300BB1C1A /* config */,
+				48407AF91F47CBF800BB1C1A /* AppDelegate.swift */,
 			);
 			path = ProficiencyTest;
 			sourceTree = "<group>";
@@ -127,10 +129,10 @@
 		48407B0D1F47CBF800BB1C1A /* ProficiencyTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				48407B3D1F47F7EB00BB1C1A /* ImageDownloadTests.swift */,
 				48407B3B1F47F55600BB1C1A /* APITests.swift */,
-				48407B0E1F47CBF800BB1C1A /* ProficiencyTestTests.swift */,
+				48407B3D1F47F7EB00BB1C1A /* ImageDownloadTests.swift */,
 				48407B101F47CBF800BB1C1A /* Info.plist */,
+				48407B0E1F47CBF800BB1C1A /* ProficiencyTestTests.swift */,
 			);
 			path = ProficiencyTestTests;
 			sourceTree = "<group>";
@@ -138,21 +140,23 @@
 		48407B191F47CBFE00BB1C1A /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
-				48407B021F47CBF800BB1C1A /* LaunchScreen.storyboard */,
-				48407B051F47CBF800BB1C1A /* Info.plist */,
 				48407B001F47CBF800BB1C1A /* Assets.xcassets */,
+				48407B051F47CBF800BB1C1A /* Info.plist */,
+				48407B021F47CBF800BB1C1A /* LaunchScreen.storyboard */,
 			);
 			name = "Supporting files";
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 		48407B1A1F47CC5600BB1C1A /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
+				48407B1B1F47CC6A00BB1C1A /* cells */,
 				48407B231F47CE0A00BB1C1A /* controller */,
 				48407B201F47CDFA00BB1C1A /* model */,
-				48407B1B1F47CC6A00BB1C1A /* cells */,
 			);
 			name = HomeViewController;
+			path = HomeViewController;
 			sourceTree = "<group>";
 		};
 		48407B1B1F47CC6A00BB1C1A /* cells */ = {
@@ -161,6 +165,7 @@
 				48407B1C1F47CC7D00BB1C1A /* HomeViewTableViewCell.swift */,
 			);
 			name = cells;
+			path = cells;
 			sourceTree = "<group>";
 		};
 		48407B201F47CDFA00BB1C1A /* model */ = {
@@ -169,6 +174,7 @@
 				48407B211F47CE0500BB1C1A /* HomeViewModel.swift */,
 			);
 			name = model;
+			path = model;
 			sourceTree = "<group>";
 		};
 		48407B231F47CE0A00BB1C1A /* controller */ = {
@@ -178,6 +184,7 @@
 				48407B1E1F47CC9700BB1C1A /* HomeViewControllerCoordinator.swift */,
 			);
 			name = controller;
+			path = controller;
 			sourceTree = "<group>";
 		};
 		48407B261F47DBE700BB1C1A /* DataProvider */ = {
@@ -188,6 +195,7 @@
 				48407B321F47DE3A00BB1C1A /* DataProviderError.swift */,
 			);
 			name = DataProvider;
+			path = DataProvider;
 			sourceTree = "<group>";
 		};
 		48407B291F47DC2300BB1C1A /* config */ = {
@@ -196,6 +204,7 @@
 				48407B2A1F47DC2F00BB1C1A /* config.swift */,
 			);
 			name = config;
+			path = config;
 			sourceTree = "<group>";
 		};
 		48407B2C1F47DD1C00BB1C1A /* model */ = {
@@ -205,6 +214,7 @@
 				48407B341F47E04600BB1C1A /* DataProviderModelSerializable.swift */,
 			);
 			name = model;
+			path = model;
 			sourceTree = "<group>";
 		};
 		48407B2F1F47DD9F00BB1C1A /* Networking */ = {
@@ -213,15 +223,18 @@
 				48407B301F47DDAC00BB1C1A /* API.swift */,
 			);
 			name = Networking;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		48407B361F47E40900BB1C1A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				48407B371F47E42700BB1C1A /* UIViewControllerState.swift */,
 				48407B391F47F29B00BB1C1A /* UIImageView+async.swift */,
+				48407B371F47E42700BB1C1A /* UIViewControllerState.swift */,
+				48407B411F4808F700BB1C1A /* Utils.swift */,
 			);
 			name = Helpers;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		903A12EB9027E2C17E9033EB /* Pods */ = {
@@ -450,6 +463,7 @@
 				48407B381F47E42700BB1C1A /* UIViewControllerState.swift in Sources */,
 				48407B2E1F47DD2500BB1C1A /* DataProviderModel.swift in Sources */,
 				48407B331F47DE3A00BB1C1A /* DataProviderError.swift in Sources */,
+				48407B421F4808F700BB1C1A /* Utils.swift in Sources */,
 				48407B281F47DBF600BB1C1A /* DataProvider.swift in Sources */,
 				48407AFC1F47CBF800BB1C1A /* HomeViewController.swift in Sources */,
 				48407AFA1F47CBF800BB1C1A /* AppDelegate.swift in Sources */,
@@ -490,6 +504,7 @@
 				48407B031F47CBF800BB1C1A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -594,7 +609,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 49PL9Y7M35;
-				INFOPLIST_FILE = ProficiencyTest/Info.plist;
+				INFOPLIST_FILE = "ProficiencyTest/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.loriscampanile.ProficiencyTest;
@@ -609,7 +624,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 49PL9Y7M35;
-				INFOPLIST_FILE = ProficiencyTest/Info.plist;
+				INFOPLIST_FILE = "ProficiencyTest/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.loriscampanile.ProficiencyTest;
